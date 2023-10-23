@@ -19,5 +19,11 @@ defined('_JEXEC') or die('Restricted access');
  */
 class HelloWorldController extends JControllerLegacy
 {
-    protected $default_view = 'helloworlds';
+	/**
+	 * The default view for the display method.
+	 *
+	 * @var string
+	 * @since 12.2
+	 */
+	protected $default_view = 'helloworlds';
 }

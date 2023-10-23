@@ -11,14 +11,14 @@
 defined('_JEXEC') or die('Restricted Access');
 ?>
 <form action="index.php?option=com_helloworld&view=helloworlds" method="POST" id="adminForm" name="adminForm">
-    <table class="table table-strip table-hover">
+    <table class="table table-striped table-hover">
         <thead>
             <tr>
                 <th width="1%">
                     <?php echo JText::_("COM_HELLOWORLD_NUM"); ?>
                 </th>
                 <th width="2%">
-                    <?php echo JHTML::_('grid.checkall'); ?>
+                    <?php echo JHtml::_('grid.checkall'); ?>
                 </th>
                 <th width="90%">
                     <?php echo JText::_("COM_HELLOWORLD_HELLOWORLDS_NAME"); ?>
@@ -46,13 +46,13 @@ defined('_JEXEC') or die('Restricted Access');
                             <?php echo $this->pagination->getRowOffset($i); ?>
                         </td>
                         <td>
-                            <?php echo JHTML::_('grid.id', $i, $row->id); ?>
+                            <?php echo JHtml::_('grid.id', $i, $row->id); ?>
                         </td>
                         <td>
                             <?php echo $row->greeting; ?>
                         </td>
-                        <td algin="center">
-                            <?php echo JHtml::_('jgrid.published', $row->published, $i, 'helloworlds', true, 'cb'); ?>
+                        <td align="center">
+                            <?php echo JHtml::_('jgrid.published', $row->published, $i, 'helloworlds.', false, 'cb'); ?>
                         </td>
                         <td align="center">
                             <?php echo $row->id; ?>
@@ -62,5 +62,6 @@ defined('_JEXEC') or die('Restricted Access');
             <?php endif; ?>
         </tbody>
     </table>
-
+    <input type="hidden" name="task" value="" />
+    <input type="hidden" name="boxchecked" value="0" />
 </form>
