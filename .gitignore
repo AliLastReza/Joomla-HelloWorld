@@ -1,3 +1,5 @@
 /.vscode
-/exercises/com_helloworld-*.zip
+/exercises/*.zip
 /Joomla_3.10.12-Stable-Full_Package.tar.bz2
+/.idea
+RealWorldExercises/*
